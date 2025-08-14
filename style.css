@@ -1,0 +1,45 @@
+:root{
+  --blue:#1f6fb2;
+  --gray:#f3f5f7;
+  --dark:#333;
+  --muted:#6b7280;
+  --page-bg:#ffffff;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+}
+
+.topbar { background: var(--blue); color: white; padding: 10px; text-align: center; font-weight: bold; }
+
+.workspace { display: flex; gap: 18px; padding: 16px; max-width: 1200px; margin: auto; }
+
+.controls { flex: 0 0 320px; background: white; padding: 14px; border-radius: 8px; }
+.controls label { display: block; margin-top: 10px; font-size: 13px; color: var(--muted); font-weight: 600; }
+.controls input, .controls textarea { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 6px; }
+.buttons { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.buttons button { background: var(--blue); color: #fff; border: none; padding: 8px 10px; border-radius: 6px; cursor: pointer; }
+.buttons button:hover { opacity: .9; }
+
+.a4-wrapper { flex: 1; display: flex; justify-content: center; align-items: flex-start; }
+.a4page { width: 210mm; height: 297mm; background: var(--page-bg); box-shadow: 0 0 10px rgba(0,0,0,0.2); display: flex; padding: 14mm; box-sizing: border-box; }
+
+.leftcol { width: 80mm; padding-right: 10px; border-right: 1px solid #ddd; font-size: 13px; }
+.contact-title { color: var(--blue); font-weight: bold; margin-bottom: 5px; }
+.section { margin-top: 10px; }
+.section-title { background: var(--blue); color: white; padding: 4px 6px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+.small { font-size: 12px; }
+.list-compact { list-style: none; padding: 0; margin: 0; }
+.list-compact li { margin: 4px 0; }
+
+.rightcol { flex: 1; padding-left: 10px; font-size: 13px; }
+.center-header { text-align: center; margin-bottom: 10px; }
+.resume-title { font-size: 26px; font-weight: 800; color: var(--blue); margin: center; }
+.center-header h1 { font-size: 26px; margin: 4px 0; }
+.role { color: var(--muted); font-weight: bold; }
+.photo-center { display: flex; justify-content: center; margin-bottom: 6px; }
+.photo-center img { width: 120px; height: 120px; border-radius: 6px; object-fit: cover; border: 2px solid var(--blue); }
+
+.work-area { white-space: pre-wrap; }
