@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume Builder — A4 Template</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">Resume Builder — Blue & Gray A4 Template</div>
+  </header>
+
+  <main class="workspace">
+    <section class="controls">
+      <h2>Edit Resume</h2>
+
+      <label>Full name</label>
+      <input id="name" value="SARIFUL MONDAL">
+
+      <label>Title / Role</label>
+      <input id="title" value="DUCT FITTER">
+
+      <label>Phone</label>
+      <input id="phone" value="+91 9930727659">
+
+      <label>Email</label>
+      <input id="email" value="azahars202@gmail.com">
+
+      <label>Address</label>
+      <textarea id="address">Chakparan Kantakhali,
+Mograhat, 24 pgs (s),
+743610, W.B, INDIA</textarea>
+
+      <label>Profile summary</label>
+      <textarea id="profile">Organized, reliable, and driven — I take pride in keeping things running smoothly behind the scenes. Every item in its place, every task with purpose.</textarea>
+
+      <label>Work experience</label>
+      <textarea id="work">2022 - 2025 — Advance Ventilation Pvt. Limited — Duct Fitter (INDIA)
+2018 - 2019 — Classic Fashion — Duct Fitter (UAE)
+2017 - 2018 — McNally Bharat Engineering Company Ltd — Duct Fitter (INDIA)</textarea>
+
+      <label>Education</label>
+      <input id="education" value="8th Passed — West Bengal Board of Secondary Education">
+
+      <label>Skills (comma separated)</label>
+      <input id="skills" value="Duct Installation Knowledge, Site Supervision, Tools & Equipment Handling, Air Balancing & Leakage, Testing, Leadership, Coordination, Quality Control">
+
+      <label>Languages (comma separated)</label>
+      <input id="languages" value="English (Intermediate), Hindi (Fluent), Bengali (Fluent)">
+
+      <label>Father / Mother</label>
+      <input id="father" value="MANNAN MONDAL">
+      <input id="mother" value="HALIMA BIBI">
+
+      <label>Passport No</label>
+      <input id="passport" value="AB822652">
+
+      <label>Passport Validity</label>
+      <input id="passportValidity" value="01/07/2035">
+
+      <label>Profile photo</label>
+      <input id="photo" type="file" accept="image/*">
+
+      <div class="buttons">
+        <button id="downloadPdf">Download A4 PDF</button>
+        <button id="printBtn">Print</button>
+      </div>
+    </section>
+
+    <!-- A4 Preview -->
+    <section class="a4-wrapper">
+      <article id="a4page" class="a4page">
+        <!-- Left column -->
+        <aside class="leftcol">
+          <div class="contact-title">CONTACT</div>
+          <div class="contact-item" id="c-phone">+91 9930727659</div>
+          <div class="contact-item" id="c-email">azahars202@gmail.com</div>
+          <div class="contact-item" id="c-address">Chakparan Kantakhali,<br>Mograhat, 24 pgs (s),<br>743610, W.B, INDIA</div>
+
+          <div class="section">
+            <div class="section-title">SKILLS</div>
+            <ul id="c-skills" class="list-compact"></ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">LANGUAGES</div>
+            <ul id="c-langs" class="list-compact"></ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">PERSONAL DETAILS</div>
+            <div class="small">Father: <span id="c-father">MANNAN MONDAL</span></div>
+            <div class="small">Mother: <span id="c-mother">HALIMA BIBI</span></div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">PASSPORT DETAILS</div>
+            <div class="small">Passport No – <span id="c-passport">AB822652</span></div>
+            <div class="small">VALIDITY – <span id="c-passportValidity">01/07/2035</span></div>
+          </div>
+        </aside>
+
+        <!-- Right column -->
+        <section class="rightcol">
+          <div class="center-header">
+            <h2 class="resume-title">RESUME</h2>
+            <h1 id="c-name">SARIFUL MONDAL</h1>
+            <div class="role" id="c-title">DUCT FITTER</div>
+          </div>
+
+          <div class="photo-center">
+            <img id="c-photo" alt="Profile Photo" src="https://via.placeholder.com/120">
+          </div>
+
+          <div class="section profile">
+            <div class="section-title">PROFILE</div>
+            <p id="c-profile"></p>
+          </div>
+
+          <div class="section">
+            <div class="section-title">WORK EXPERIENCE</div>
+            <div id="c-work" class="work-area"></div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">EDUCATION</div>
+            <div id="c-education" class="small"></div>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <!-- PDF libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
